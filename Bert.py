@@ -57,8 +57,3 @@ for i, (t, p) in enumerate(zip(predicted_tokens, probs), 1):
     print("Top {} ({:2}%)：{}".format(i, int(p.item() * 100), tokens[:15]), '...')
 
 
-df_train = pd.read_csv('tbrain_train_final_0610.csv')
-empty_title = ((df_train['name'].notnull()))
-
-df_train = df_train[~empty_title]
-print(df_train.head(5))
